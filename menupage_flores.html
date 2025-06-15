@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Italianos® - Menu</title>
+      <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<style>
+:root {
+--color-bg: #ffffff;
+--color-text: #6b7280;
+--color-heading: #111827;
+--color-accent: #111827;
+--radius: 0.75rem;
+--shadow-light: 0 1px 3px rgb(0 0 0 / 0.1);
+--shadow-hover: 0 4px 8px rgb(0 0 0 / 0.12);
+--font-heading: 'Lora', serif;
+--font-body: 'Lora', serif;
+--spacing-vertical: 4rem;
+--max-width: 1200px;
+}
+
+/* Reset and base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-image: url(image/bgmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3 {
+    color: var(--color-heading);
+    margin: 0 0 1rem 0;
+    font-family: var(--font-heading);
+}
+h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: var(--spacing-vertical);
+    margin-bottom: 1.25rem;
+}
+p {
+    margin: 0.25rem 0 0.75rem 0;
+}
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+a:hover,
+a:focus {
+    color: #4b5563;
+    outline: none;
+}
+/* Container */
+.container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+/* Header */
+.name {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+    margin: 15px;
+    margin-top: 0;
+    padding-top: 20px;
+    color: white;
+}
+
+.nametitle {
+    margin-top: 3px;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.navtitle {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 100%), url(image/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: -10px;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.25rem;
+}
+
+.navbutton {
+    background-color: black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    position: sticky;
+    top: 0;
+    font-size: 1.25rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: gray;
+}
+/* Hero */
+.hero {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    color: var(--color-heading);
+}
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0.5rem auto 0;
+    color: var(--color-text);
+    line-height: 1.5;
+}
+
+/* Menu Sections */
+section.menu-section {
+    margin-bottom: var(--spacing-vertical);
+}
+section.menu-section > h2 {
+    border-left: 4px solid var(--color-accent);
+    padding-left: 12px;
+    margin-bottom: 2rem;
+    color: var(--color-heading);
+}
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+    gap: 1.75rem 2rem;
+}
+article.menu-item {
+    background: #fafafa;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-light);
+    padding: 1.25rem 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+}
+article.menu-item:hover,
+article.menu-item:focus-within {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+    outline: none;
+}
+article.menu-item h3 {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-heading);
+    flex-grow: 0;
+}
+article.menu-item p.description {
+    flex-grow: 1;
+    color: var(--color-text);
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    min-height: 3rem;
+}
+article.menu-item p.price {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 1rem;
+    margin-top: auto;
+    align-self: flex-end;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 120px;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+
+    .navbutton a {
+        display: block;
+        margin: 5px 0;
+        font-size: 0.95rem;
+    }
+
+    .navbutton {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+}
+</style>
+<header>
+    <nav class="navtitle">
+        <h1 class="name">Italianos®</h1>
+        <p class="nametitle">Pinnacle of Pizza</p>
+    </nav>
+    <nav class="navbutton">
+        <a id="nav" href="index.html">Home</a>
+        <a id="nav" href="menupage_flores.html">Menu</a>
+        <a id="nav" href="reviewpage_jamora.html">Review</a>
+        <a id="nav" href="aboutpage_ampado.html">About Us</a>
+        <a id="nav" href="reservation_alday.html">Reservation</a>
+    </nav>
+</header>
+
+<main class="container" role="main">
+    <section class="hero" aria-label="Restaurant Introduction">
+    <h1>Menu</h1>
+    <p>Authentic Italian Flavors with a Filipino Heart</p>
+    </section>
+
+    <section id="appetizers" class="menu-section" aria-labelledby="appetizers-title">
+    <h2 id="appetizers-title">Appetizers</h2>
+    <div class="menu-items">
+        <article class="menu-item" tabindex="0">
+        <h3>Bruschetta al Pomodoro</h3>
+        <p class="description">Grilled ciabatta topped with marinated tomatoes, garlic, and fresh basil.</p>
+        <p class="price">₱180</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Caprese Skewers</h3>
+        <p class="description">Mozzarella, cherry tomatoes, and basil drizzled with balsamic glaze.</p>
+        <p class="price">₱210</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Calamari Fritti</h3>
+        <p class="description">Crispy fried squid served with lemon aioli.</p>
+        <p class="price">₱280</p>
+        </article>
+    </div>
+    </section>
+
+    <section id="pizza" class="menu-section" aria-labelledby="pizza-title">
+    <h2 id="pizza-title">Pizza</h2>
+    <div class="menu-items">
+        <article class="menu-item" tabindex="0">
+        <h3>Margherita</h3>
+        <p class="description">Classic pizza with tomato sauce, mozzarella, and fresh basil.</p>
+        <p class="price">₱350</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Quattro Formaggi</h3>
+        <p class="description">Four cheese blend: mozzarella, gorgonzola, parmesan, and fontina.</p>
+        <p class="price">₱420</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Prosciutto e Rucola</h3>
+        <p class="description">Tomato sauce, mozzarella, prosciutto, and fresh arugula.</p>
+        <p class="price">₱480</p>
+        </article>
+    </div>
+    </section>
+
+    <section id="pasta" class="menu-section" aria-labelledby="pasta-title">
+    <h2 id="pasta-title">Pasta</h2>
+    <div class="menu-items">
+        <article class="menu-item" tabindex="0">
+        <h3>Spaghetti Carbonara</h3>
+        <p class="description">Spaghetti with pancetta, egg, parmesan, and black pepper.</p>
+        <p class="price">₱330</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Fettuccine Alfredo</h3>
+        <p class="description">Creamy alfredo sauce with fettuccine and parmesan cheese.</p>
+        <p class="price">₱350</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Penne Arrabbiata</h3>
+        <p class="description">Penne pasta with spicy tomato sauce and garlic.</p>
+        <p class="price">₱320</p>
+        </article>
+    </div>
+    </section>
+
+    <section id="main-dishes" class="menu-section" aria-labelledby="main-dishes-title">
+    <h2 id="main-dishes-title">Main Dishes</h2>
+    <div class="menu-items">
+        <article class="menu-item" tabindex="0">
+        <h3>Osso Buco</h3>
+        <p class="description">Braised veal shanks served with gremolata and risotto alla Milanese.</p>
+        <p class="price">₱750</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Pollo Parmigiana</h3>
+        <p class="description">Breaded chicken breast topped with marinara and melted mozzarella.</p>
+        <p class="price">₱480</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Saltimbocca alla Romana</h3>
+        <p class="description">Veal with prosciutto and sage in a white wine sauce.</p>
+        <p class="price">₱680</p>
+        </article>
+    </div>
+    </section>
+
+    <section id="desserts" class="menu-section" aria-labelledby="desserts-title">
+    <h2 id="desserts-title">Desserts</h2>
+    <div class="menu-items">
+        <article class="menu-item" tabindex="0">
+        <h3>Tiramisu</h3>
+        <p class="description">Classic Italian dessert with mascarpone, espresso, and cocoa.</p>
+        <p class="price">₱220</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Panna Cotta</h3>
+        <p class="description">Creamy vanilla pudding with berry coulis.</p>
+        <p class="price">₱200</p>
+        </article>
+        <article class="menu-item" tabindex="0">
+        <h3>Gelato Assortito</h3>
+        <p class="description">Selection of premium Italian gelato flavors.</p>
+        <p class="price">₱180</p>
+        </article>
+    </div>
+    </section>
+</main>
+
+<footer>
+    <p>Follow Us on</p>
+    <a href="#">
+        <img src="image/facebook-new.png" width="30px">
+    </a>
+    <p>©2025 Italianos®. All Rights Reserved</p>
+</footer>
+</body>
+</html>

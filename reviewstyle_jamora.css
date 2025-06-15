@@ -1,0 +1,345 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+body {
+    background-image: url(image/bgmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* START OF NAVBAR */
+
+.name {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+    margin: 5px;
+    color: white;
+}
+
+.nametitle {
+    margin-top: 1px;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.navtitle {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 100%), url(image/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: -10px;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.25rem;
+}
+
+.navbutton {
+    background-color: black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    position: sticky;
+    top: 0;
+    font-size: 1.25rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: gray;
+}
+
+/* END OF NAVBAR */
+
+.title {
+    font-size: 2rem;
+    margin-top: 100px;
+}
+
+.totalwrapper {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.reviewsummary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 10px black;
+    max-width: 700px;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.ratingaverage {
+    text-align: center;
+    flex: 1;
+    border-right: 1px solid #ddd;
+    padding-right: 30px;
+}
+
+.ratingaverage h1 {
+    font-size: 3rem;
+    color: #ff8c00;
+    margin: 0;
+}
+
+.stardisplay {
+    color: #ffb800;
+    font-size: 1.5rem;
+    margin: 8px 0;
+}
+
+.totalratings {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+.ratingbreakdown {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding-left: 20px;
+}
+
+.ratingrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.barcontainer {
+    background-color: #eee;
+    border-radius: 4px;
+    height: 8px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.barfill {
+    height: 100%;
+    background-color: #ffb800;
+}
+
+.ratingdisplay {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 50px auto;
+    margin-top: 10px;
+}
+
+.ratingboard {
+    background-color: rgb(236, 236, 236);
+    box-shadow: 2px 2px 10px black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px 0;
+}
+
+.rating-box {
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    width: 30%;
+    margin: 30px auto 0 auto;
+}
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 2rem;
+    color: lightgrey;
+    cursor: pointer;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: gold;
+}
+
+.comment-box {
+    margin-top: 10px;
+    width: 90%;
+}
+
+.comment-display {
+    margin-top: 20px;
+}
+
+.comment {
+    border-top: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.rating {
+    color: gold;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  font-size: 1.2rem;
+}
+
+.modal-close {
+  color: #aaa;
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 120px;
+}
+
+@media (max-width: 768px) {
+    .name {
+        font-size: 3.5rem;
+    }
+
+    .nametitle {
+        font-size: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .rating-box {
+        width: 90%;
+    }
+
+    .reviewsummary {
+        flex-direction: column;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .ratingaverage {
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+        padding-right: 0;
+    }
+
+    .ratingbreakdown {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .name {
+        font-size: 4rem;
+    }
+
+    .nametitle {
+        font-size: 2rem;
+    }
+
+    .rating-box {
+        padding: 15px;
+    }
+
+    .navbutton a {
+        display: block;
+        margin: 5px 0;
+        font-size: 0.95rem;
+    }
+
+    .navbutton {
+        flex-direction: column;
+    }
+
+    .ratingdisplay {
+        grid-template-columns: 1fr;
+    }
+
+    .reviewsummary {
+        padding: 10px;
+    }
+}

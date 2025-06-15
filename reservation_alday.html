@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italianos® - Reservation</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="reservation_alday.css">
+</head>
+<body>
+    <nav class="navtitle">
+        <h1 class="name">Italianos®</h1>
+        <p class="nametitle">Pinnacle of Pizza</p>
+    </nav>
+    <nav class="navbutton">
+        <a id="nav" href="index.html">Home</a>
+        <a id="nav" href="menupage_flores.html">Menu</a>
+        <a id="nav" href="reviewpage_jamora.html">Review</a>
+        <a id="nav" href="aboutpage_ampado.html">About Us</a>
+        <a id="nav" href="reservation_alday.html">Reservation</a>
+    </nav>
+    <div class="contents">
+<h1>Reserve Your Table</h1>
+    <hr>
+    <h4><i>Welcome! Are you tired of waiting in lines? Well then, here you can reserve your seats now; just fill out the form, and we will reserve a seat for you. </i></h4>
+    <form>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Full Name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="email@example.com">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date">
+            </div>    
+
+            <div class="form-group">
+                <label for="time">Reservation Time:</label>
+                <input type="time" id="time">
+            </div>
+
+            <div class="form-group">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" min="1" max="20">
+            </div>
+
+            <div class="form-group">
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" rows="4" placeholder="Any special requests?"></textarea>
+            </div>
+            
+    </form>
+<!--RESERVE BUTTON-->
+           <button id="reserveBtn">Reserve</button>
+
+    <div class="modal-overlay" id="modal">
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <h2 id="modalTitle">Thank you for reserving</h2>
+        <button class="close-btn" id="closeBtn">Close</button>
+      </div>
+    </div>
+
+  </div>
+    
+<script>
+  const reserveBtn = document.getElementById('reserveBtn');
+  const modal = document.getElementById('modal');
+  const closeBtn = document.getElementById('closeBtn');
+
+  reserveBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  
+  modal.addEventListener('click', (e) => {
+    if(e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+
+  
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && modal.classList.contains('active')) {
+      modal.classList.remove('active');
+    }
+  });
+</script>
+    
+</body>
+<footer>
+    <p>Follow Us on</p>
+    <a href="#">
+        <img src="image/facebook-new.png" width="30px">
+    </a>
+    <p>©2025 Italianos®. All Rights Reserved</p>
+</footer>
+</html>

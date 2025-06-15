@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(image/bgmap.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.content {
+  padding: 40px;
+}
+
+.name {
+    font-size: 5rem;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: italic;
+    margin: 5px;
+    color: white;
+}
+
+.nametitle {
+    margin-top: 1px;
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: white;
+    text-shadow: 1px 1px 5px black;
+}
+
+.navtitle {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 90%, black 100%), url(image/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    margin-top: -10px;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
+    font-size: 1.25rem;
+}
+
+.navbutton {
+    background-color: black;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-shadow: 1px 1px 3px black;
+    position: sticky;
+    top: 0;
+    font-size: 1.25rem;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a:hover {
+    transition: 0.5s;
+    color: gray;
+}
+
+.form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    width: 30%;
+    padding: 12px 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+    
+  }
+
+  input:focus,
+  select:focus {
+    border-color: #4e73df;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.2);
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator,
+    input[type="time"]::-webkit-calendar-picker-indicator {
+      cursor: pointer;
+    }
+
+    /*BUTTON*/
+  button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Modal styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .modal-overlay.active {
+    display: flex;
+  }
+
+  .modal {
+    background-color: white;
+    padding: 24px 32px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .modal h2 {
+    margin-bottom: 16px;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .close-btn {
+    margin-top: 12px;
+    padding: 8px 18px;
+    font-size: 14px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .close-btn:hover {
+    background-color: #0056b3;
+  }
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 120px;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .navbutton a {
+        display: block;
+        margin: 5px 0;
+        font-size: 0.95rem;
+    }
+
+    .navbutton {
+        flex-direction: column;
+    }
+
+    input,
+    select {
+      width: 70%;
+    }
+}
